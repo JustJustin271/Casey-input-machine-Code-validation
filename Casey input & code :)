@@ -1,0 +1,68 @@
+import time 
+
+responses = {
+    "bread": "Bread! Yum :)",
+    "apple": "Me no likely fruit :(",
+    "orange": "Me no likely fruit :(",
+    "banana": "I hate it with every fiber of my pretzel loving soul!",
+    "grass": "I need to touch some grass, but let me bring my phone to obsess over fictional characters :)",
+    "croissant": "French, oui oui :)",
+    "pretzels": "Tasty :D"
+}
+
+code = "1234"
+
+while True: 
+    input_code = input("What is the code?\n")
+        
+    if input_code == code: 
+        print("Access granted! \n\n")
+        time.sleep(2)
+        break
+        
+    else:
+        print("Access denied!\n")
+        time.sleep(2)
+          
+            
+time.sleep(1)
+
+print("Drumroll...\n")
+
+time.sleep(2)
+
+print("It is time for the the input thingy :) \n")
+
+time.sleep(2)
+
+print("Options: " + ", ".join(sorted(responses.keys())) + "\n")
+
+while True:
+    input_answer = input("What is your desried input for the Casey to judge?\n\n").lower().strip()
+    
+    result = responses.get(input_answer)
+    
+    if result is not None: 
+        print(result + "\n")
+        time.sleep(2)
+            
+        confirm = input("Would you like to exit the program? (Y)\n\n").lower().strip()
+        
+        if confirm in ["y", "yes", "yeah", "yup"]:
+            break
+        
+        else: 
+            time.sleep(1.41)
+            
+            print("Options: " + ", ".join(sorted(responses.keys())) + "\n") 
+            time.sleep(2)
+        
+    else: 
+        print("Please type a valid input\n")
+        time.sleep(1)
+        print("Options: " + ", ".join(sorted(responses.keys())) + "\n") 
+        time.sleep(2)
+#Input machine for Casey :)         
+# January 28th, 2026, after snow storm in the the Eastern United States
+#Line 67 :) 
+#https://www.online-python.com/IkTmGnXb5q
